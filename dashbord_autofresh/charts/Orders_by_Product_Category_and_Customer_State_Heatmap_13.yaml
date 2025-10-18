@@ -1,0 +1,37 @@
+slice_name: Orders by Product Category and Customer State (Heatmap)
+description: null
+certified_by: null
+certification_details: null
+viz_type: heatmap_v2
+params:
+  datasource: 16__table
+  viz_type: heatmap_v2
+  slice_id: 13
+  x_axis: product_category
+  groupby: customer_state
+  metric: count
+  adhoc_filters: []
+  row_limit: 10000
+  normalize_across: heatmap
+  legend_type: continuous
+  linear_color_scheme: schemeMagma
+  xscale_interval: -1
+  yscale_interval: -1
+  left_margin: auto
+  bottom_margin: auto
+  value_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  x_axis_time_format: smart_date
+  show_legend: true
+  show_percentage: true
+  show_values: false
+  extra_form_data: {}
+  dashboards:
+  - 5
+query_context: '{"datasource":{"id":16,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[{"columnType":"BASE_AXIS","sqlExpression":"product_category","label":"product_category","expressionType":"SQL"},"customer_state"],"metrics":["count"],"orderby":[],"annotation_layers":[],"row_limit":10000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"rank","options":{"metric":"count"}}]}],"form_data":{"datasource":"16__table","viz_type":"heatmap_v2","slice_id":13,"x_axis":"product_category","groupby":"customer_state","metric":"count","adhoc_filters":[],"row_limit":10000,"normalize_across":"heatmap","legend_type":"continuous","linear_color_scheme":"schemeMagma","xscale_interval":-1,"yscale_interval":-1,"left_margin":"auto","bottom_margin":"auto","value_bounds":[null,null],"y_axis_format":"SMART_NUMBER","x_axis_time_format":"smart_date","show_legend":true,"show_percentage":true,"show_values":false,"extra_form_data":{},"dashboards":[5],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: d4b2a848-b3f4-4e9d-9875-42c5ab42a603
+version: 1.0.0
+dataset_uuid: d1e1e016-4b08-45be-8c38-fcd95f523c95

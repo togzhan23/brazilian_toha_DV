@@ -1,0 +1,202 @@
+table_name: orders
+main_dttm_col: normalized_total_value.
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: brazilian
+schema: public
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 03365a30-8b54-428c-b705-2d083c744795
+metrics:
+- metric_name: order_value_growth
+  verbose_name: Order Value Growth
+  metric_type: null
+  expression: "(SUM(order_items.price + order_items.freight_value) - \n LAG(SUM(order_items.price\
+    \ + order_items.freight_value)) OVER (ORDER BY DATE_TRUNC('month', orders.order_purchase_timestamp))\n\
+    ) / LAG(SUM(order_items.price + order_items.freight_value)) OVER (ORDER BY DATE_TRUNC('month',\
+    \ orders.order_purchase_timestamp))\n"
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: median_order_value
+  verbose_name: Median Order Value
+  metric_type: null
+  expression: PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY order_items.price + order_items.freight_value)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: avg_order_value
+  verbose_name: 'AVG '
+  metric_type: null
+  expression: 'AVG(order_items.price + order_items.freight_value)
+
+    '
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: order_value_category
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "CASE \n    WHEN price + freight_value < 50 THEN 'Low'\n    WHEN price\
+    \ + freight_value >= 50 AND price + freight_value < 150 THEN 'Medium'\n    ELSE\
+    \ 'High'\nEND\n"
+  description: "\u0417\u0434\u0435\u0441\u044C price + freight_value \u2014 \u0441\
+    \u0443\u043C\u043C\u0430 \u0441\u0442\u043E\u0438\u043C\u043E\u0441\u0442\u0438\
+    \ \u0442\u043E\u0432\u0430\u0440\u0430 \u0438 \u0434\u043E\u0441\u0442\u0430\u0432\
+    \u043A\u0438. \u0420anges \u043C\u043E\u0436\u043D\u043E \u043C\u0435\u043D\u044F\
+    \u0442\u044C \u043F\u043E \u0441\u0432\u043E\u0435\u043C\u0443 \u0443\u0441\u043C\
+    \u043E\u0442\u0440\u0435\u043D\u0438\u044E."
+  python_date_format: null
+  extra: {}
+- column_name: normalized_total_value.
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "(price + freight_value - MIN(price + freight_value) OVER ()) \n/\n\
+    (MAX(price + freight_value) OVER () - MIN(price + freight_value) OVER ())\n"
+  description: "price + freight_value \u2014 \u0442\u0435\u043A\u0443\u0449\u0430\u044F\
+    \ \u0441\u0443\u043C\u043C\u0430 \u0437\u0430\u043A\u0430\u0437\u0430. MIN(...)\
+    \ OVER () \u0438 MAX(...) OVER () \u0431\u0435\u0440\u0443\u0442 \u043C\u0438\u043D\
+    \u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0438 \u043C\u0430\u043A\u0441\
+    \u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0435 \u0437\u043D\u0430\u0447\u0435\
+    \u043D\u0438\u0435 \u043F\u043E \u0432\u0441\u0435\u0439 \u043A\u043E\u043B\u043E\
+    \u043D\u043A\u0435. \u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442 \u0431\
+    \u0443\u0434\u0435\u0442 \u0432 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D\
+    \u0435 [0,1]."
+  python_date_format: null
+  extra: {}
+- column_name: order_delivered_carrier_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_estimated_delivery_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_delivered_customer_date
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_purchase_timestamp
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_approved_at
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: TIMESTAMP WITHOUT TIME ZONE
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_status
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: customer_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: VARCHAR
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 01bb104e-81b6-4ea9-bd17-b7a0e4ee9dd1

@@ -1,0 +1,59 @@
+table_name: avg_order_value_by_state
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: brazilian
+schema: null
+sql: "WITH order_totals AS (\n  SELECT oi.order_id, SUM(oi.price + oi.freight_value)\
+  \ AS order_total\n  FROM order_items oi\n  GROUP BY oi.order_id\n)\nSELECT c.customer_state,\n\
+  \       AVG(ot.order_total) AS avg_order_value\nFROM order_totals ot\nJOIN orders\
+  \ o ON ot.order_id = o.order_id\nJOIN customers c ON o.customer_id = c.customer_id\n\
+  WHERE o.order_status = 'delivered'\nGROUP BY c.customer_state\nORDER BY avg_order_value\
+  \ DESC\nLIMIT 10;\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 707a8ddf-4fce-4d48-9f55-a8a392083a3c
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: avg_order_value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: customer_state
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 01bb104e-81b6-4ea9-bd17-b7a0e4ee9dd1

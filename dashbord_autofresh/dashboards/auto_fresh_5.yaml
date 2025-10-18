@@ -1,0 +1,382 @@
+dashboard_title: auto fresh
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: 72e1104b-17d7-4183-9422-f3e8bdf5462d
+position:
+  CHART-explore-11-1:
+    children: []
+    id: CHART-explore-11-1
+    meta:
+      chartId: 11
+      height: 50
+      sliceName: Customer Geolocation Across Brazil (world map without a map)
+      uuid: 7d1de433-af35-42bb-8afa-38533feba44a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XIsb2EPoQj1AmFcikmUak
+    type: CHART
+  CHART-explore-12-1:
+    children: []
+    id: CHART-explore-12-1
+    meta:
+      chartId: 12
+      height: 50
+      sliceName: "new_autofresh (\u0430\u0432\u0442\u043E\u0444\u0440\u0435\u0448)"
+      uuid: 8640759c-1bed-4df3-9d07-816616875c84
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XIsb2EPoQj1AmFcikmUak
+    type: CHART
+  CHART-explore-13-1:
+    children: []
+    id: CHART-explore-13-1
+    meta:
+      chartId: 13
+      height: 50
+      sliceName: Orders by Product Category and Customer State (Heatmap)
+      uuid: d4b2a848-b3f4-4e9d-9875-42c5ab42a603
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XIsb2EPoQj1AmFcikmUak
+    type: CHART
+  CHART-explore-14-1:
+    children: []
+    id: CHART-explore-14-1
+    meta:
+      chartId: 14
+      height: 50
+      sliceName: Revenue by Product Category (treemap 7)
+      uuid: 482fead9-e28c-41af-9682-b6c41c7fe8c7
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-1aHt-JvI50O5gJEfoUen3
+    type: CHART
+  CHART-explore-15-1:
+    children: []
+    id: CHART-explore-15-1
+    meta:
+      chartId: 15
+      height: 50
+      sliceName: Most Frequent Product Categories (9 world cloud)
+      uuid: ffe840b5-3982-4c4a-9bb5-5a5c48f364b7
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-1aHt-JvI50O5gJEfoUen3
+    type: CHART
+  CHART-explore-17-1:
+    children: []
+    id: CHART-explore-17-1
+    meta:
+      chartId: 17
+      height: 50
+      sliceName: 'NEW Daily Order Volume: Database vs CSV'
+      uuid: 374bad60-2b42-4f02-ad28-bd87c8b3681f
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9SoZhSsOnm88jxqIddtFN
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-XIsb2EPoQj1AmFcikmUak
+    - ROW-1aHt-JvI50O5gJEfoUen3
+    - ROW-9SoZhSsOnm88jxqIddtFN
+    - ROW-N-GAPHOOII
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: auto fresh
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-1aHt-JvI50O5gJEfoUen3:
+    children:
+    - CHART-explore-14-1
+    - CHART-explore-15-1
+    id: ROW-1aHt-JvI50O5gJEfoUen3
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-9SoZhSsOnm88jxqIddtFN:
+    children:
+    - CHART-explore-17-1
+    id: ROW-9SoZhSsOnm88jxqIddtFN
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-XIsb2EPoQj1AmFcikmUak:
+    children:
+    - CHART-explore-11-1
+    - CHART-explore-12-1
+    - CHART-explore-13-1
+    id: ROW-XIsb2EPoQj1AmFcikmUak
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-N-GAPHOOII:
+    children:
+    - CHART-EZ8GZ8SQ
+    id: ROW-N-GAPHOOII
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-EZ8GZ8SQ:
+    children: []
+    id: CHART-EZ8GZ8SQ
+    meta:
+      chartId: 18
+      height: 50
+      sliceName: metrics (AVG vs MEDIAN)
+      uuid: 38778db7-2458-4fd1-8565-7088e9b05af6
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-GAPHOOII
+metadata:
+  color_scheme_domain: []
+  shared_label_colors:
+  - agro_industria_e_comercio
+  - alimentos
+  - alimentos_bebidas
+  - artes
+  - artes_e_artesanato
+  - artigos_de_festas
+  - artigos_de_natal
+  - audio
+  - automotivo
+  - bebes
+  - bebidas
+  - beleza_saude
+  - brinquedos
+  - cama_mesa_banho
+  - casa_conforto
+  - casa_conforto_2
+  - casa_construcao
+  - cds_dvds_musicais
+  - cine_foto
+  - climatizacao
+  - consoles_games
+  - construcao_ferramentas_construcao
+  - construcao_ferramentas_ferramentas
+  - construcao_ferramentas_iluminacao
+  - construcao_ferramentas_jardim
+  - construcao_ferramentas_seguranca
+  - cool_stuff
+  - dvds_blu_ray
+  - eletrodomesticos
+  - eletrodomesticos_2
+  - eletronicos
+  - eletroportateis
+  - esporte_lazer
+  - fashion_bolsas_e_acessorios
+  - fashion_calcados
+  - fashion_esporte
+  - fashion_roupa_feminina
+  - fashion_roupa_infanto_juvenil
+  - fashion_roupa_masculina
+  - fashion_underwear_e_moda_praia
+  - ferramentas_jardim
+  - flores
+  - fraldas_higiene
+  - industria_comercio_e_negocios
+  - informatica_acessorios
+  - instrumentos_musicais
+  - la_cuisine
+  - livros_importados
+  - livros_interesse_geral
+  - livros_tecnicos
+  - malas_acessorios
+  - market_place
+  - moveis_colchao_e_estofado
+  - moveis_cozinha_area_de_servico_jantar_e_jardim
+  - moveis_decoracao
+  - moveis_escritorio
+  - moveis_quarto
+  - moveis_sala
+  - musica
+  - papelaria
+  - pcs
+  - perfumaria
+  - pet_shop
+  - portateis_casa_forno_e_cafe
+  - relogios_presentes
+  - seguros_e_servicos
+  - sinalizacao_e_seguranca
+  - tablets_impressao_imagem
+  - telefonia
+  - telefonia_fixa
+  - utilidades_domesticas
+  map_label_colors:
+    cama_mesa_banho: '#1FA8C9'
+    esporte_lazer: '#454E7C'
+    moveis_decoracao: '#5AC189'
+    beleza_saude: '#FF7F44'
+    utilidades_domesticas: '#666666'
+    automotivo: '#E04355'
+    informatica_acessorios: '#FCC700'
+    brinquedos: '#A868B7'
+    relogios_presentes: '#3CCCCB'
+    telefonia: '#A38F79'
+    bebes: '#8FD3E4'
+    perfumaria: '#A1A6BD'
+    fashion_bolsas_e_acessorios: '#ACE1C4'
+    papelaria: '#FEC0A1'
+    cool_stuff: '#B2B2B2'
+    ferramentas_jardim: '#EFA1AA'
+    pet_shop: '#FDE380'
+    'null': '#D3B3DA'
+    eletronicos: '#9EE5E5'
+    construcao_ferramentas_construcao: '#D1C6BC'
+    eletrodomesticos: '#454E7C'
+    malas_acessorios: '#5AC189'
+    consoles_games: '#FF7F44'
+    moveis_escritorio: '#666666'
+    instrumentos_musicais: '#E04355'
+    eletroportateis: '#FCC700'
+    casa_construcao: '#A868B7'
+    livros_interesse_geral: '#3CCCCB'
+    fashion_calcados: '#A38F79'
+    moveis_sala: '#8FD3E4'
+    climatizacao: '#A1A6BD'
+    livros_tecnicos: '#ACE1C4'
+    telefonia_fixa: '#FEC0A1'
+    casa_conforto: '#B2B2B2'
+    alimentos_bebidas: '#EFA1AA'
+    market_place: '#FDE380'
+    fashion_roupa_masculina: '#D3B3DA'
+    moveis_cozinha_area_de_servico_jantar_e_jardim: '#9EE5E5'
+    sinalizacao_e_seguranca: '#D1C6BC'
+    construcao_ferramentas_seguranca: '#D1C6BC'
+    eletrodomesticos_2: '#454E7C'
+    construcao_ferramentas_jardim: '#5AC189'
+    alimentos: '#FF7F44'
+    bebidas: '#666666'
+    construcao_ferramentas_iluminacao: '#E04355'
+    agro_industria_e_comercio: '#FCC700'
+    industria_comercio_e_negocios: '#A868B7'
+    artigos_de_natal: '#3CCCCB'
+    audio: '#A38F79'
+    artes: '#8FD3E4'
+    fashion_underwear_e_moda_praia: '#A1A6BD'
+    dvds_blu_ray: '#ACE1C4'
+    moveis_quarto: '#FEC0A1'
+    construcao_ferramentas_ferramentas: '#B2B2B2'
+    livros_importados: '#EFA1AA'
+    portateis_casa_forno_e_cafe: '#FDE380'
+    pcs: '#D3B3DA'
+    cine_foto: '#9EE5E5'
+    musica: '#9EE5E5'
+    fashion_roupa_feminina: '#D1C6BC'
+    artigos_de_festas: '#454E7C'
+    artes_e_artesanato: '#5AC189'
+    fashion_esporte: '#FF7F44'
+    flores: '#666666'
+    fraldas_higiene: '#E04355'
+    moveis_colchao_e_estofado: '#FCC700'
+    la_cuisine: '#A868B7'
+    portateis_cozinha_e_preparadores_de_alimentos: '#3CCCCB'
+    tablets_impressao_imagem: '#A38F79'
+    fashion_roupa_infanto_juvenil: '#8FD3E4'
+    casa_conforto_2: '#A1A6BD'
+    pc_gamer: '#ACE1C4'
+    seguros_e_servicos: '#FEC0A1'
+    cds_dvds_musicais: '#B2B2B2'
+    SUM(total_revenue): '#1FA8C9'
+    COUNT(review_id): '#1FA8C9'
+    CSV: '#454E7C'
+    Database: '#1FA8C9'
+    RS: '#1FA8C9'
+    BA: '#454E7C'
+    RJ: '#5AC189'
+  label_colors: {}
+  chart_configuration:
+    '12':
+      id: 12
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 11
+        - 13
+        - 14
+        - 15
+        - 17
+    '14':
+      id: 14
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 11
+        - 12
+        - 13
+        - 15
+        - 17
+    '17':
+      id: 17
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 17
+  color_scheme: ''
+  refresh_frequency: 0
+  expanded_slices: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+version: 1.0.0

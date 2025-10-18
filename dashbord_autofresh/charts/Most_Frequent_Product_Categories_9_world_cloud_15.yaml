@@ -1,0 +1,25 @@
+slice_name: Most Frequent Product Categories (9 world cloud)
+description: null
+certified_by: null
+certification_details: null
+viz_type: word_cloud
+params:
+  datasource: 8__table
+  viz_type: word_cloud
+  series: product_category_name
+  metric: count
+  adhoc_filters: []
+  row_limit: 100
+  sort_by_metric: true
+  size_from: 10
+  size_to: 70
+  rotation: square
+  color_scheme: supersetColors
+  extra_form_data: {}
+  dashboards:
+  - 5
+query_context: '{"datasource":{"id":8,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["product_category_name"],"metrics":["count"],"orderby":[["count",false]],"annotation_layers":[],"row_limit":100,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"8__table","viz_type":"word_cloud","series":"product_category_name","metric":"count","adhoc_filters":[],"row_limit":100,"sort_by_metric":true,"size_from":10,"size_to":70,"rotation":"square","color_scheme":"supersetColors","extra_form_data":{},"dashboards":[5],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: ffe840b5-3982-4c4a-9bb5-5a5c48f364b7
+version: 1.0.0
+dataset_uuid: e4b80a82-ca66-43d9-ba5c-4efd3ce78771

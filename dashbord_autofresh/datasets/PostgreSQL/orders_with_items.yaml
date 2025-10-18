@@ -1,0 +1,173 @@
+table_name: orders_with_items
+main_dttm_col: order_purchase_timestamp
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: brazilian
+schema: public
+sql: "SELECT \n    o.order_id,\n    o.order_purchase_timestamp,\n    o.customer_id,\n\
+  \    oi.order_item_id,\n    oi.product_id,\n    oi.price,\n    oi.freight_value,\n\
+  \    (oi.price + oi.freight_value) AS total_value\nFROM orders o\nJOIN order_items\
+  \ oi\n    ON o.order_id = oi.order_id\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 2a14c0e3-dad0-4aee-9da4-30bd42c4eef2
+metrics:
+- metric_name: Growth Rate
+  verbose_name: Growth Rate
+  metric_type: null
+  expression: '(AVG(total_value) - LAG(AVG(total_value)) OVER (ORDER BY DATE_TRUNC(''year'',
+    order_purchase_timestamp))) / LAG(AVG(total_value)) OVER (ORDER BY DATE_TRUNC(''year'',
+    order_purchase_timestamp))
+
+    '
+  description: null
+  d3format: null
+  currency: null
+  extra: {}
+  warning_text: null
+- metric_name: diff_median_avg
+  verbose_name: Median - Average
+  metric_type: null
+  expression: PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY total_value) - AVG(total_value)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: median_total_value
+  verbose_name: Median Total Value
+  metric_type: null
+  expression: PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY total_value)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: avg_total_value
+  verbose_name: Average Total Value
+  metric_type: null
+  expression: AVG(total_value)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: total_value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: freight_value
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: price
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_purchase_timestamp
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_item_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: product_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: customer_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: order_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 01bb104e-81b6-4ea9-bd17-b7a0e4ee9dd1

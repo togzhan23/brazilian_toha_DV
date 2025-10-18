@@ -1,0 +1,17 @@
+database_name: PostgreSQL
+sqlalchemy_uri: postgresql+psycopg2://postgres:XXXXXXXXXX@localhost:5432/brazilian
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: true
+extra:
+  metadata_params: {}
+  engine_params: {}
+  metadata_cache_timeout: {}
+  schemas_allowed_for_file_upload: []
+impersonate_user: false
+uuid: 01bb104e-81b6-4ea9-bd17-b7a0e4ee9dd1
+version: 1.0.0

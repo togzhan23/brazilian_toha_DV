@@ -1,0 +1,72 @@
+table_name: 'NEW order_items '
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: brazilian
+schema: null
+sql: "SELECT \n    pct.product_category_name AS category,  -- \u0431\u0435\u0440\u0435\
+  \u043C \u043F\u0440\u043E\u0441\u0442\u043E product_category_name\n    SUM(oi.price\
+  \ + oi.freight_value) AS total_revenue,\n    COUNT(*) AS order_count\nFROM order_items\
+  \ oi\nJOIN products p ON oi.product_id = p.product_id\nJOIN product_category_translation\
+  \ pct ON p.product_category_name = pct.product_category_name\nJOIN orders o ON oi.order_id\
+  \ = o.order_id\nWHERE o.order_status = 'delivered'\nGROUP BY pct.product_category_name\n\
+  ORDER BY total_revenue DESC;\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 8dbb8ef5-576a-41c6-b799-321077d72aed
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: total_revenue
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: order_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: category
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: 01bb104e-81b6-4ea9-bd17-b7a0e4ee9dd1

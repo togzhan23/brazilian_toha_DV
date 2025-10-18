@@ -1,0 +1,52 @@
+slice_name: Customer Geolocation Across Brazil (world map without a map)
+description: null
+certified_by: null
+certification_details: null
+viz_type: deck_scatter
+params:
+  datasource: 2__table
+  viz_type: deck_scatter
+  slice_id: 11
+  spatial:
+    type: latlong
+    latCol: geolocation_lat
+    lonCol: geolocation_lng
+  row_limit: 10000
+  filter_nulls: true
+  adhoc_filters: []
+  mapbox_style: mapbox://styles/mapbox/light-v9
+  autozoom: true
+  viewport:
+    bearing: 0
+    latitude: 31.222656842808707
+    longitude: 6.85236157047845
+    pitch: 0
+    zoom: 1
+  point_radius_fixed:
+    type: fix
+    value: 3
+  point_unit: square_m
+  min_radius: 2
+  max_radius: 250
+  multiplier: 1
+  color_picker:
+    a: 1
+    b: 135
+    g: 122
+    r: 0
+  legend_position: tr
+  legend_format: SMART_NUMBER
+  dimension: geolocation_state
+  color_scheme: supersetColors
+  js_columns: []
+  time_grain_sqla: null
+  granularity: null
+  extra_form_data: {}
+  dashboards:
+  - 4
+  - 5
+query_context: '{"datasource":{"id":2,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"time_grain_sqla":null,"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[],"annotation_layers":[],"row_limit":10000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"2__table","viz_type":"deck_scatter","slice_id":11,"spatial":{"type":"latlong","latCol":"geolocation_lat","lonCol":"geolocation_lng"},"row_limit":10000,"filter_nulls":true,"adhoc_filters":[],"mapbox_style":"mapbox://styles/mapbox/light-v9","autozoom":true,"viewport":{"bearing":0,"latitude":31.222656842808707,"longitude":6.85236157047845,"pitch":0,"zoom":1},"point_radius_fixed":{"type":"fix","value":3},"point_unit":"square_m","min_radius":2,"max_radius":250,"multiplier":1,"color_picker":{"a":1,"b":135,"g":122,"r":0},"legend_position":"tr","legend_format":"SMART_NUMBER","dimension":"geolocation_state","color_scheme":"supersetColors","js_columns":[],"time_grain_sqla":null,"granularity":null,"extra_form_data":{},"dashboards":[4,5],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7d1de433-af35-42bb-8afa-38533feba44a
+version: 1.0.0
+dataset_uuid: 7d7dcb87-140e-4052-9f57-158a8411b5f6

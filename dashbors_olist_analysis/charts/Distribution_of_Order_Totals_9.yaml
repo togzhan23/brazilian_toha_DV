@@ -1,0 +1,28 @@
+slice_name: Distribution of Order Totals
+description: null
+certified_by: null
+certification_details: null
+viz_type: histogram_v2
+params:
+  datasource: 14__table
+  viz_type: histogram_v2
+  column: order_total
+  groupby: []
+  adhoc_filters: []
+  row_limit: 10000
+  bins: '50'
+  color_scheme: supersetColors
+  show_legend: true
+  x_axis_title: Order Total (BRL)
+  x_axis_format: SMART_NUMBER
+  y_axis_title: Number of Orders
+  y_axis_format: SMART_NUMBER
+  extra_form_data: {}
+  dashboards:
+  - 4
+query_context: '{"datasource":{"id":14,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["order_total"],"annotation_layers":[],"row_limit":10000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"histogram","options":{"column":"order_total","groupby":[],"bins":50}}]}],"form_data":{"datasource":"14__table","viz_type":"histogram_v2","column":"order_total","groupby":[],"adhoc_filters":[],"row_limit":10000,"bins":"50","color_scheme":"supersetColors","show_legend":true,"x_axis_title":"Order
+  Total (BRL)","x_axis_format":"SMART_NUMBER","y_axis_title":"Number of Orders","y_axis_format":"SMART_NUMBER","extra_form_data":{},"dashboards":[4],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7eae29cf-6004-40a9-a8b0-67ec8d48a5c4
+version: 1.0.0
+dataset_uuid: 007134c9-26c4-4d29-9195-8af5ebfa88bf
